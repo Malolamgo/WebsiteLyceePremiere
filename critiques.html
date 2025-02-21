@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <script>
+            (function() {
+                // Vérifier si le thème est sauvegardé dans localStorage
+                const savedTheme = localStorage.getItem("theme") || "light";
+                // Appliquer le thème sauvegardé à la balise <html>
+                document.documentElement.setAttribute("data-theme", savedTheme);
+            })();
+        </script>
+        <link href="style.css" rel="stylesheet" />
+        <title>Onii Chan Wa Oshimai!</title>
+        <link rel="icon" href="siteicone.jpg">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="personnages.html">Personnages</a></li>
+                    <li><a href="manga.html">Manga</a></li>
+                    <li><a href="critiques.html">Critiques</a></li>
+                </ul>
+            </nav>
+
+            <form class="color-picker" action="">
+                <fieldset>
+                    <legend></legend>
+                    <label for="theme" class="cache">Light</label>
+                    <input type="radio" name="theme", id="light" checked>
+
+                    <label for="theme" class="cache">Dark</label>
+                    <input type="radio" name="theme", id="purple">
+
+                    <label for="theme" class="cache">AMOLED</label>
+                    <input type="radio" name="theme", id="amoled">
+                </fieldset>
+            </form>
+
+        </header>
+
+        <main>
+            <h1 class="titreprincipal">Onii Chan Wa Oshimai</h1>
+            <h2 class="titrepersonnages">Critiques:</h2>
+
+            <div class="critique1">
+                <p>Don't listen to the people who said this anime is only for pedophiles and lolicons.</p>
+                <p>The extreme fanservice is only present in the first episode and the opening.</p>
+                <p class="espace">Skip the opening if you don't like it. Read the manga instead. It's worth it.</p>
+                <p>This anime is a feel good slice of life with cute moments and you can feel happy watching Mahiro grow as a person.</p>
+                <p class="espace">The animation is great and feels so fluid and the art style is just eye candy.</p>
+                <p>The story is your normal slice of life stuff after the first episode after Mahiro gets turned into a girl. It's heartwarming to see Mahiro ...</p>
+                <a href="https://myanimelist.net/profile/omanjuu" target="_blank"> <img class="imageomanjuu" src="omanjuu.png" alt="Image de profil de omanjuu qui a fait cette critique"> </a>
+                <a class="omanjuusite" href="https://myanimelist.net/anime/51678/Oniichan_wa_Oshimai/reviews?sort=suggested&filter_check=1&filter_hide=" target="_blank"><figcaption class="omanjuusite">Critiques sur MyAnimeList</figcaption></a>
+
+            </div>
+
+            <div class="critique2">
+                <p class="espace">Extremely cute and wholesome... but not made for hysterical puritans.</p>
+                <p class="espace">Originally, early complains about the show made me skip it. I actually tend to like _some_ fanservice, but not in combination with somewhat "childish" animation style.</p>
+                <p class="espace">Then, my daughter (8yo) had seen the first two episodes and enthusiastically recommended the show to me basically as a "must watch".</p>
+                <p class="espace">Long story short, we both enjoy it very much and consider it one of the best shows of this season.</p>
+                <p class="espace">It is extremely cute (the ending sequence is possibly the cutest thing Ive seen in recent anime) and wholesome, and occassionally funny, with some Dragon Maid meets Yuru Yuri vibes. ...</p>
+                <a href="https://myanimelist.net/profile/SkepticWarlock" target="_blank"> <img class="imagesw" src="SkepticWarlock.png" alt="Image de profil de SkepticWarlock qui a fait cette critique"> </a>
+                <a class="swsite" href="https://myanimelist.net/anime/51678/Oniichan_wa_Oshimai/reviews?sort=suggested&filter_check=1&filter_hide=" target="_blank"> <figcaption class="swsite">Critiques sur MyAnimeList</figcaption> </a>
+            </div>
+
+            <div class="critique3">
+                <p>Don't believe other reviewers out there trash-talking this show, this is a good anime. </p>
+                <p class="espace">if you don't like it then it might not be for you.</p>
+                <p>As a manga fan myself since it came out I'm not one bit disappointed with this adaptation.</p>
+                <p>the animation is nothing but superb, Studio Bind is just showing off at this point that they can deliver god-tier animation like Mushoku Tensei on any show they touch upon.</p>
+                <p>sure some might not be fond of the fan service of this show but hey, if you don't like it then go watch the censored version. They got 2 versions for a reason ...</p>
+                <a href="https://myanimelist.net/profile/GENDSAMA" target="_blank"> <img class="imagegendsama" src="Gendsama.png" alt="Image de profil de GENDSAMA qui a fait cette critique"> </a>
+                <a class="gendsamasite" href="https://myanimelist.net/anime/51678/Oniichan_wa_Oshimai/reviews?sort=suggested&filter_check=1&filter_hide=" target="_blank"> <figcaption class="gendsamasite">Critiques sur MyAnimeList</figcaption> </a>
+            </div>
+        </main>
+        <footer>
+            <h3>&copy; Designed by <a class="github" href="https://github.com/Malolamgo" target="_blank"> Malo</a></h3>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const themeRadios = document.querySelectorAll("input[name='theme']");
+                const savedTheme = localStorage.getItem("theme") || "light";
+                
+                // Appliquer le thème enregistrer
+                document.documentElement.setAttribute("data-theme", savedTheme);
+                
+                // Vérifier si les boutons sont biens sur le thème enregister (ça a été très long mais ça marche ahah)
+                const selectedRadio = document.getElementById(savedTheme);
+                if (selectedRadio) {
+                    selectedRadio.checked = true;
+                }
+                
+                // Applique les changements (c'était long aussi)
+                themeRadios.forEach(radio => {
+                    radio.addEventListener("change", function () {
+                        localStorage.setItem("theme", this.id); // Les enregistre dans localStorage
+                        document.documentElement.setAttribute("data-theme", this.id); // Les applique
+                    });
+                });
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <script>
+            (function() {
+                // Vérifier si le thème est sauvegardé dans localStorage
+                const savedTheme = localStorage.getItem("theme") || "light";
+                // Appliquer le thème sauvegardé à la balise <html>
+                document.documentElement.setAttribute("data-theme", savedTheme);
+            })();
+        </script>
+        <link href="style.css" rel="stylesheet" />
+        <title>Onii Chan Wa Oshimai!</title>
+        <link rel="icon" href="siteicone.jpg">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="personnages.html">Personnages</a></li>
+                    <li><a href="manga.html">Manga</a></li>
+                    <li><a href="critiques.html">Critiques</a></li>
+                </ul>
+            </nav>
+
+            <form class="color-picker" action="">
+                <fieldset>
+                    <legend></legend>
+                    <label for="theme" class="cache">Light</label>
+                    <input type="radio" name="theme", id="light" checked>
+
+                    <label for="theme" class="cache">Dark</label>
+                    <input type="radio" name="theme", id="purple">
+
+                    <label for="theme" class="cache">AMOLED</label>
+                    <input type="radio" name="theme", id="amoled">
+                </fieldset>
+            </form>
+
+        </header>
+
+        <main>
+            <h1 class="titreprincipal">Onii Chan Wa Oshimai</h1>
+            <h2 class="titrepersonnages">Manga original:</h2>
+
+            <div class="divresumemanga">
+                <div class="resumemanga">
+                    <p>C'est une série de manga japonaise par Nekotofu.</p>
+                    <p>Elle est publiée en ligne depuis 2017.</p>
+                    <p>Cette saga est également prépubliée dans le Monthly Comic Rex de Ichijinsha depuis avril 2019.</p>
+                    <p>Elle est actuellement composée de neuf volumes.</p>
+                    <p>Une adaptation en série d'animation produite par Studio Bind est diffusée entre janvier et mars 2023. </p>
+                </div>
+                <img class="imagemanga" src="manga.jpg" alt="Covers des 6 premiers tomes de Onii-chan Wa Oshimai!">
+            </div>
+            <p class="infotechnique">Auteur: <a class="auteur" href="https://oniichan-wa-oshimai.fandom.com/wiki/Nekotofu" target="_blank"> Nekotofu</a>,     Editeur: <a class="editeur" href="https://fr.wikipedia.org/wiki/Ichijinsha" target="_blank"> Ichijinsha</a>,     Cible éditiorale: <a class="cible" href="https://fr.wikipedia.org/wiki/Sh%C5%8Dnen" target="_blank"> Shōnen</a></p>
+        </main>
+        <footer id="footerindex">
+            <h3>&copy; Designed by <a class="github" href="https://github.com/Malolamgo" target="_blank"> Malo</a></h3>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const themeRadios = document.querySelectorAll("input[name='theme']");
+                const savedTheme = localStorage.getItem("theme") || "light";
+                
+                // Appliquer le thème enregistrer
+                document.documentElement.setAttribute("data-theme", savedTheme);
+                
+                // Vérifier si les boutons sont biens sur le thème enregister (ça a été très long mais ça marche ahah)
+                const selectedRadio = document.getElementById(savedTheme);
+                if (selectedRadio) {
+                    selectedRadio.checked = true;
+                }
+                
+                // Applique les changements (c'était long aussi)
+                themeRadios.forEach(radio => {
+                    radio.addEventListener("change", function () {
+                        localStorage.setItem("theme", this.id); // Les enregistre dans localStorage
+                        document.documentElement.setAttribute("data-theme", this.id); // Les applique
+                    });
+                });
+            });
+        </script>
+
+    </body>
+</html>

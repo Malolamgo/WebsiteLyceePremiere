@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <script>
+            (function() {
+                // Vérifier si le thème est sauvegardé dans localStorage
+                const savedTheme = localStorage.getItem("theme") || "light";
+                // Appliquer le thème sauvegardé à la balise <html>
+                document.documentElement.setAttribute("data-theme", savedTheme);
+            })();
+        </script>
+        <link href="style.css" rel="stylesheet" />
+        <title>Onii Chan Wa Oshimai!</title>
+        <link rel="icon" href="siteicone.jpg">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="personnages.html">Personnages</a></li>
+                    <li><a href="manga.html">Manga</a></li>
+                    <li><a href="critiques.html">Critiques</a></li>
+                </ul>
+            </nav>
+
+            <form class="color-picker" action="">
+                <fieldset>
+                    <legend></legend>
+                    <label for="theme" class="cache">Light</label>
+                    <input type="radio" name="theme", id="light" checked>
+
+                    <label for="theme" class="cache">Dark</label>
+                    <input type="radio" name="theme", id="purple">
+
+                    <label for="theme" class="cache">AMOLED</label>
+                    <input type="radio" name="theme", id="amoled">
+                </fieldset>
+            </form>
+
+        </header>
+
+        <main>
+            <h1 class="titreprincipal">Onii Chan Wa Oshimai</h1>
+            <h2 class="titrepersonnages">Personnages:</h2>
+
+            <div class="contenu2">
+                <div class="mahiro">
+                    <h3 class="persomahiro">Mahiro Oyama</h3>
+                    <div class="divmahiro">    
+                        <p>Le personnage principal de l'anime, Mahiro était un otaku </p>
+                        <p>qui vivait avec sa soeur cadette Mihari, </p>
+                        <p>jusqu'à ce qu'il se transforme en fille grâce à une de ses expériences.</p>
+                        <p>Mahiro rejoint donc un nouveau collège.</p>
+                        <p>Elle aime jouer aux jeux vidéo</p>
+                        <p>et restait principalement à la maison avant de devenir une fille.</p>
+                    </div>  
+                    <div class="divimagepersonnages">
+                        <img class="mahirooyamaimage" src="MahiroOyama.png" alt="Image de Mahiro Oyama dans l'anime">
+                        <a class="marika" href="https://en.wikipedia.org/wiki/Marika_K%C5%8Dno" target="_blank"><figcaption class="figmarika">Marika Kōno</figcaption></a>
+                    </div>
+                </div>
+
+                <div class="mihari">
+                    <p class="persomihari">Mihari Oyama</p>
+                    <div class="divmihari">
+                        <p>Petite soeur de Mahiro et scientifique.</p>
+                        <p>Elle transofrme Mahiro en fille grâce à une de ses expériences</p>
+                        <p>Grâce à son intelligence, elle a sauté plusieurs classes et est</p>
+                        <p>maintenant élève à l'université.</p>
+                    </div>
+                    <div class="divimagepersonnages">
+                        <img class="miharioyamaimage" src="MihariOyama.jpg" alt="Image de Mihari Oyama dans l'anime">
+                        <a class="kaori" href="https://en.wikipedia.org/wiki/Kaori_Ishihara" target="_blank"><figcaption class="figkaori">Kaori Ishihara</figcaption></a>
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="contenu3">
+                <div class="kaede">
+                    <p class="persokaede">Kaede Hozuki</p>
+                    <div class="divkaede">
+                        <p>Camarade de classe de Mihari du collège et est une gyaru.</p>
+                        <p>Elle est la soeur de Momiji. Elle sait cuisiner et se maquiller.</p>
+                        <p>Elle travaille aussi à temps partiel dans un fastfood.</p>
+                    </div>
+                    <div class="divimagepersonnages">
+                        <img class="kaedehozukiimage" src="KaedeHozuki.jpg" alt="Image de Kaede Hozuki dans l'anime">
+                        <a class="hisako" href="https://en.wikipedia.org/wiki/Hisako_Kanemoto" target="_blank"><figcaption class="fighisako">Hisako Kanemoto</figcaption></a>
+                    </div>
+                </div>
+
+                <div class="momiji">
+                    <p class="persomomiji">Momiji Hozuki</p>
+                    <div class="divmomiji">
+                        <p>Petite soeur de Kaede et amie de Mahiro.</p>
+                        <p>Elle a une personnalité "tomboy" et admire grandement Mahiro</p>
+                        <p>Elle est amie avec Asahi depuis plusieurs années.</p>
+                    </div>
+                    <div class="divimagepersonnages">
+                        <img class="momijihozukiimage" src="MomijiHozuki.jpg" alt="Image de Momiji Hozuki dans l'anime">
+                        <a class="minami" href="https://en.wikipedia.org/wiki/Minami_Tsuda" target="_blank"><figcaption class="figminami">Minami Tsuda</figcaption></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenu4">
+                <div class="asahi">
+                    <p class="persoasahi">Asahi Ōka</p>
+
+                    <div class="divasahi">
+                        <p>Amie de Mahiro.</p>
+                        <p>Elle a une personnalité énergique mais ne réussie pas pendant les examens</p>
+                        <p>Elle appelle aussi Mahiro par plein de surnoms.</p>
+                    </div>
+                    <div class="divimagepersonnages">
+                        <img class="asahiokaimage" src="AsahiOka.jpg" alt="Image de Asahi Oka dans l'anime">
+                        <a class="kana" href="https://en.wikipedia.org/wiki/Kana_Y%C5%ABki" target="_blank"><figcaption class="figkana">Kana Yūki</figcaption></a>
+                    </div>
+                </div>
+
+                <div class="miyo">
+                    <p class="persomiyo">Miyo Murosaki</p>
+
+                    <div class="divmiyo">
+                        <p>Amie de Mahiro. Intéressée dans les yuri,</p>
+                        <p>elle essaie tant bien que mal de le cacher</p>
+                        <p>Elle aime imaginer ses amies dans des situations romantiques</p>
+                        <p>Miyo à une poitrine plus importante que ses amies</p>
+                        <p>est embarrassée à propos de ça.</p>
+                    </div>
+                    <div class="divimagepersonnages">
+                        <img class="miyomurosakiimage" src="MiyoMurosaki.png" alt="Image de Miyo Murosaki dans l'anime">
+                        <a class="natsumi" href="https://en.wikipedia.org/wiki/Natsumi_Hioka" target="_blank"><figcaption class="fignatsumi">Natsumi Hioka</figcaption></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <h3>&copy; Designed by <a class="github" href="https://github.com/Malolamgo" target="_blank"> Malo</a></h3>
+        </footer>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const themeRadios = document.querySelectorAll("input[name='theme']");
+                const savedTheme = localStorage.getItem("theme") || "light";
+                
+                // Appliquer le thème enregistrer
+                document.documentElement.setAttribute("data-theme", savedTheme);
+                
+                // Vérifier si les boutons sont biens sur le thème enregister (ça a été très long mais ça marche ahah)
+                const selectedRadio = document.getElementById(savedTheme);
+                if (selectedRadio) {
+                    selectedRadio.checked = true;
+                }
+                
+                // Applique les changements (c'était long aussi)
+                themeRadios.forEach(radio => {
+                    radio.addEventListener("change", function () {
+                        localStorage.setItem("theme", this.id); // Les enregistre dans localStorage
+                        document.documentElement.setAttribute("data-theme", this.id); // Les applique
+                    });
+                });
+            });
+        </script>
+
+    </body>
+</html>

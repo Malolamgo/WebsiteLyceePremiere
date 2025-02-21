@@ -1,0 +1,608 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* border: 1px;
+    border-style: solid; */
+}
+
+:root {
+    --cirlce: #000;
+    --wheat: wheat;
+    --pink-1: rgb(255, 51, 204);
+    --pink-writting-1: rgb(255, 87, 213);
+    --pink-writting-darker: rgb(221, 40, 176);
+    --pink-head-foot: rgb(255, 167, 251);
+    --background: pink;
+    --background-dots: white;
+    --navbar-text-color: rgb(211, 57, 198);
+    --text-footer: rgb(211, 57, 198);
+    --scrollbar-background: rgb(255, 167, 251);
+    --scrollbar-gradient-haut: rgb(185, 111, 182);
+    --scrollbar-gradient-bas: rgb(133, 65, 130);
+    --titre-principal-gauche: rgb(207, 78, 219);
+    --titre-principal-droit: rgb(66, 16, 66);
+    --video-border: rgb(241, 127, 252);
+    --bouton-menu-hover: rgb(255, 138, 249);
+    --animation-tourne-1: rgb(199, 73, 199);
+    --border-style-index: dotted;
+}
+
+body {
+    background-color: var(--background);
+    background-image: radial-gradient(var(--background-dots) 3px, transparent 0);
+    background-size: 40px 40px;
+    margin: 0px;
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 8;
+}
+
+.contenu, .contenu2, .contenu3, .contenu4, .divresumemanga, .droiteindex {
+    display: flex;
+}
+
+.contenu2, .contenu3, .contenu4 {
+    place-content: center;
+}
+
+.droiteindex, .englobepersoreal, .englobepersoscenar, .englobepersostud, .divperso, .divsynopsis {
+    place-items: center;
+    place-content: center;
+}
+
+.divperso {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.divperso3 {
+    margin-left: 4%;
+}
+
+.titreprincipal {
+    text-align: center;
+    background: linear-gradient(to right, var(--titre-principal-gauche), var(--titre-principal-droit));
+    background-clip: text;
+    color: transparent;
+    font-size: 60px;
+    border: 2.5px;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: var(--pink-1);
+}
+
+.h2synopsis {
+    color: var(--pink-writting-1);
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+.paragraphepres, .resumemanga {
+    color: var(--pink-writting-darker);
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.divsynopsis {
+    border: 5px;
+    border-style: var(--border-style-index);
+    border-color: var(--pink-1);
+    border-radius: 30px;
+    background-color: var(--background);
+    position: relative;
+}
+
+@property --angle-2 {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.divsynopsis::after, .divsynopsis::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle-2), transparent 70%, var(--animation-tourne-1));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 10px;
+    border-radius: 30px;
+    animation: 3s spin2 linear infinite;
+}
+
+.divsynopsis::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin2 {
+    from {
+        --angle-2: 0deg;
+    }
+    to {
+        --angle-2: 360deg;
+    }
+}
+
+.source1 {
+    font-size: 20px;
+    margin-left: 470px;
+    color: var(--pink-writting-darker);
+}
+
+.h2production {
+    color: var(--pink-writting-1);
+    display: inline-block; 
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+.realisateur {
+    color:var(--pink-writting-1);
+    font-size: 20px;
+}
+
+.shingofujiiphoto {
+    width: 200px;
+    height: 200px;
+    /* margin-left: 170px; */
+    border-radius: 10px;
+}
+
+.sousphoto1 {
+    color:var(--pink-writting-1);
+    font-size: 15px;
+}
+
+.scenariste {
+    margin-top: 91px;
+    font-size: 20px;
+    color:var(--pink-writting-1);
+}
+
+.wikiyokote {
+    color:var(--pink-writting-1);
+    text-decoration: none;
+}
+
+.yokotemichikophoto {
+    /* margin-left: 170px; */
+    border-radius: 10px;
+}
+
+.nautiljonyokote {
+    color:var(--pink-writting-1);
+    font-size: 15px;
+}
+
+.studio {
+    color:var(--pink-writting-1);
+    font-size: 20px;
+}
+
+.wikibind {
+    color: var(--pink-writting-1);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.englobepersostud, .divresumemanga {
+    margin-top: 90px;
+}
+
+.bindlogo {
+    width: 249px;
+    height: 100px;
+    /* margin-left: 150px; */
+}
+
+.wikibindlogo {
+    color:var(--pink-writting-1);
+    font-size: 15px;
+}
+
+.shingox {
+    color:var(--pink-writting-1);
+}
+
+.titrepersonnages {
+    color: var(--pink-1);
+    text-align: center;
+    font-size: 45px;
+}
+
+.persomahiro, .persomihari, .persokaede, .persomomiji, .persoasahi, .persomiyo {
+    color:var(--pink-writting-1);
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.mahiro, .mihari, .kaede, .momiji, .asahi, .miyo {
+    display: grid; /* Pour Firefox car sinon il n'est pas content ! */
+    border: 3px;
+    border-style: solid;
+    border-color: var(--pink-1);
+    border-radius: 30px;
+    position: relative;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.divmahiro, .divmihari, .divkaede, .divmomiji, .divasahi, .divmiyo {
+    display: grid; /* Pour Firefox car sinon il n'est pas content ! */
+    color: var(--pink-writting-darker);
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 1px;
+    place-content: center;
+    place-items: center;
+}
+
+.mihari, .momiji, .miyo {
+    margin-left: 10px;
+}
+
+.kaede, .momiji, .asahi, .miyo {
+    margin-top: 5%;
+}
+
+.mahirooyamaimage {
+    width: 150px;
+    height: 206.55px;
+    margin-top: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.miharioyamaimage {
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.kaedehozukiimage {
+    width: 300px;
+    height: 300px;
+    margin-top: 70px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.momijihozukiimage {
+    width: 300px;
+    height: 300px;
+    margin-top: 70px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.asahiokaimage {
+    width: 300px;
+    height: 300px;
+    margin-top: 70px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.miyomurosakiimage {
+    width: 200px;
+    height: 288px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.mihari, .momiji, .miyo {
+    margin-left: 200px;
+}
+
+.miyo, .asahi {
+    margin-bottom: 30px;
+}
+
+.figmarika, .figkaori, .fighisako, .figminami, .figkana, .fignatsumi {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.marika, .kaori, .hisako, .minami, .kana, .natsumi, .auteur, .editeur, .cible {
+    color: var(--pink-writting-darker);
+    text-decoration: underline;
+}
+
+.resumemanga {
+    border: 3px;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    place-items: center;
+    place-content: center;
+    background-color: var(--background);
+    position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.resumemanga::after, .resumemanga::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, var(--animation-tourne-1));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 7px;
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+}
+
+.resumemanga::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg
+    }
+    to {
+        --angle: 360deg
+    }
+}
+
+.imagemanga {
+    width: 448px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.divresumemanga, .infotechnique {
+    color:var(--pink-writting-darker);
+    font-size: 20px;
+    margin-right: 50px;
+}
+
+.infotechnique {
+    text-align: center;
+    font-size: 30px;
+}
+
+.auteur, .editeur, .cible {
+    color:var(--pink-writting-darker);
+}
+
+.espace {
+    margin-bottom: 50px;
+}
+
+.critique1, .critique2, .critique3 {
+    border: 4px;
+    border-style: dashed;
+    border-color: var(--pink-1);
+    border-radius: 80px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+    place-content: center;
+    place-items: center;
+    color: var(--pink-1);
+    font-size: 22px;
+    background-color: var(--background);
+}
+
+.imageomanjuu, .imagesw, .imagegendsama {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    /* margin-bottom: 30px; */
+}
+
+.omanjuusite, .swsite, .gendsamasite {
+    color: var(--pink-1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: var(--pink-head-foot);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+.navbar a{
+    color: var(--navbar-text-color);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: var(--bouton-menu-hover);
+    transition: 1s;
+    scale: 1.1;
+}
+
+.navbar li{
+    float: left;
+}
+
+footer {
+    /* position: sticky; */
+    bottom: 0px;
+    width: 100vw;
+    background-color: var(--pink-head-foot);
+    color: var(--text-footer);
+    text-align: center;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--scrollbar-gradient-haut), var(--scrollbar-gradient-bas));
+}
+
+.github {
+    color: var(--text-footer);
+}
+
+.cache {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.color-picker > fieldset {
+    border: 0px;
+    border-radius: 7px;
+    display: flex;
+    gap: 2rem;
+    background: var(--pink-head-foot);
+    padding: 1rem 3rem;
+    width: fit-content;
+    margin-inline: auto;
+    top: 0px;
+    position: relative;
+    top: -2.39vw;
+}
+
+.color-picker input[type="radio"] {
+    appearance: none;
+    width: 0.7rem;
+    height: 0.7rem;
+    outline: 3px solid var(--circle, currentColor);
+    outline-offset: 2px;
+    border-radius: 50%;
+}
+
+.color-picker input[type="radio"]:checked {
+    background-color: var(--circle);
+}
+
+.color-picker input[type="radio"]#light {
+    --circle: pink;
+}
+
+.color-picker input[type="radio"]#purple {
+    --circle: rgb(135, 20, 100);
+}
+
+.color-picker input[type="radio"]#amoled {
+    --circle: black;
+}
+
+html[data-theme="light"] {
+    --cirlce: #000;
+    --wheat: wheat;
+    --pink-1: rgb(255, 51, 204);
+    --pink-writting-1: rgb(255, 87, 213);
+    --pink-writting-darker: rgb(221, 40, 176);
+    --pink-head-foot: rgb(255, 167, 251);
+    --background: pink;
+    --background-dots: white;
+    --navbar-text-color: rgb(211, 57, 198);
+    --text-footer: rgb(211, 57, 198);
+    --scrollbar-backround: rgb(255, 167, 251);
+    --scrollbar-gradient-haut: rgb(185, 111, 182);
+    --scrollbar-gradient-bas: rgb(133, 65, 130);
+}
+
+html[data-theme="purple"] {
+    --pink-1: rgb(255, 255, 255);
+    --pink-writting-darker: white;
+    --pink-writting-1: white;
+    --background: rgb(59, 17, 52);
+    --background-dots: rgb(83, 30, 74);
+    --pink-head-foot: rgb(96, 20, 73);
+    --navbar-text-color: white;
+    --text-footer: white;
+    --scrollbar-background: rgb(49, 10, 43);
+    --scrollbar-gradient-haut: rgb(49, 10, 43);
+    --scrollbar-gradient-bas: rgb(27, 7, 24);
+    --titre-principal-gauche: #fff;
+    --titre-principal-droit: #fff;
+    --video-border: rgb(101, 31, 107);
+    --bouton-menu-hover: rgb(73, 17, 56);
+    --animation-tourne-1: rgb(170, 22, 126);
+}
+
+html[data-theme="amoled"] {
+    --pink-1: white;
+    --pink-writting-darker: white;
+    --pink-writting-1: white;
+    --background: #000;
+    --background-dots: #111;
+    --pink-head-foot: #000;
+    --navbar-text-color: white;
+    --text-footer: white;
+    --scrollbar-background: #000;
+    --scrollbar-gradient-haut: #000;
+    --scrollbar-gradient-bas: #000;
+    --titre-principal-gauche: #fff;
+    --titre-principal-droit: #fff;
+    --video-border: #000;
+    --bouton-menu-hover: #000;
+    --border-style-index: solid;
+}
+
+#footerindex {
+    margin-top: 5%;
+}
+
+.videotrailer {
+    place-self: center;
+    place-items: center;
+}
+
+iframe {
+    width: 540px;
+    height: 304px;
+    border: 5px outset var(--video-border);
+}
+
+.trailer {
+    color: var(--pink-writting-1);
+    font-size: 30px;
+    margin-top: 10%;
+    text-decoration: underline;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <script>
+            (function() {
+                // Vérifier si le thème est sauvegardé dans localStorage
+                const savedTheme = localStorage.getItem("theme") || "light";
+                // Appliquer le thème sauvegardé à la balise <html>
+                document.documentElement.setAttribute("data-theme", savedTheme);
+            })();
+        </script>
+        <link href="style.css" rel="stylesheet" />
+        <title>Onii Chan Wa Oshimai!</title>
+        <link rel="icon" href="siteicone.jpg">
+    </head>
+    
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="personnages.html">Personnages</a></li>
+                    <li><a href="manga.html">Manga</a></li>
+                    <li><a href="critiques.html">Critiques</a></li>
+                </ul>
+                
+            </nav>
+
+            <form class="color-picker" action="">
+                <fieldset>
+                    <legend></legend>
+                    <label for="theme" class="cache">Light</label>
+                    <input type="radio" name="theme", id="light" >
+
+                    <label for="theme" class="cache">Dark</label>
+                    <input type="radio" name="theme", id="purple">
+
+                    <label for="theme" class="cache">AMOLED</label>
+                    <input type="radio" name="theme", id="amoled">
+                </fieldset>
+            </form>
+
+        </header>
+
+        <main>
+            
+            <h1 class="titreprincipal">Onii Chan Wa Oshimai</h1>
+
+            <div class="contenu">
+                <div class="divsynopsis">
+                    <h2 class="h2synopsis">Synopsis de l'animé:</h2>
+
+                    <div class="paragraphepres">
+                        <p>L'histoire suit Mahiro Oyama, jeune otaku vivant</p>
+                        <p>avec sa petite sœur scientifique Mihari.</p>
+                        <p>Un jour, par la faute d'une expérience de cette dernière,</p>
+                        <p>il se réveille en tant que petite fille.</p>
+                        <p>Mahiro doit maintenant apprendre à vivre en fille,</p>
+                        <p>tout en se faisant des amies dans sa nouvelle école.</p>
+                        <a class="source1" href="https://fr.wikipedia.org/wiki/Onimai:_I%27m_Now_Your_Sister!" target="_blank">Wikipedia</a>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="droiteindex"></div>
+                    <div class="divperso">
+                        <h2 class="h2production">Production:</h2>
+
+                        <div class="englobepersoreal">
+                            <p class="realisateur">Réalisateur: Shingo Fujii</p>
+                            <a href="https://x.com/monsuun" target="_blank"> <img src="ShingoFujiiPfp.jpg" alt="Photo de profil de Shingo Fujii sur X" class="shingofujiiphoto"> </a>
+                            <p class="sousphoto1">Pas d'image disponible alors</p>
+                            <p class="sousphoto1">c'est sa photo de profil sur <a href="https://x.com/monsuun" target="_blank" class="shingox">X</a>.</p>
+                        </div>
+                    </div>
+                    <div class="divperso2">
+                        <div class="englobepersoscenar">
+                            <p class="scenariste">Scénariste: <a class="wikiyokote" href="https://fr.wikipedia.org/wiki/Michiko_Yokote" target="_blank">Michiko Yokote</a></p>
+                            <a href="https://www.nautiljon.com/people/yokote+michiko.html" target="_blank"> <img src="YokoteMichiko.png" alt="Image de Yokote Michiko" class="yokotemichikophoto"> </a>
+                            <p><a class="nautiljonyokote" href="https://www.nautiljon.com/people/yokote+michiko.html" target="_blank">Nautiljon</a></p>
+                        </div>
+                    </div>
+                    <div class="divperso3">
+                        <div class="englobepersostud">
+                            <p class="studio">Studio d'animation: <a class="wikibind" href="https://fr.wikipedia.org/wiki/Studio_Bind" target="_blank">Studio Bind Co., Ltd.</a></p>
+                            <a href="https://fr.wikipedia.org/wiki/Studio_Bind" target="_blank"> <img src="Studio_Bind_logo.png" alt="Logo de Studio Bind Co., Ltf." class="bindlogo"> </a>
+                            <p><a class="wikibindlogo" href="https://commons.wikimedia.org/w/index.php?title=File:Studio_Bind_logo.svg&lang=fr&uselang=fr" target="_blank">Wikipedia</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="videotrailer">
+                <h2 class="trailer">Trailer:</h2>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AfptqR9LbHc?si=lyxo6D_Q5tkzwAN4" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </main>
+
+        <footer id="footerindex">
+            <h3>&copy; Designed by <a class="github" href="https://github.com/Malolamgo" target="_blank"> Malo</a></h3>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const themeRadios = document.querySelectorAll("input[name='theme']");
+                const savedTheme = localStorage.getItem("theme") || "light";
+                
+                // Appliquer le thème enregistrer
+                document.documentElement.setAttribute("data-theme", savedTheme);
+                
+                // Vérifier si les boutons sont biens sur le thème enregister (ça a été très long à faire mais ça marche ahah)
+                const selectedRadio = document.getElementById(savedTheme);
+                if (selectedRadio) {
+                    selectedRadio.checked = true;
+                }
+                
+                // Applique les changements (c'était long à faire aussi)
+                themeRadios.forEach(radio => {
+                    radio.addEventListener("change", function () {
+                        localStorage.setItem("theme", this.id); // Les enregistre dans localStorage
+                        document.documentElement.setAttribute("data-theme", this.id); // Les applique
+                    });
+                });
+            });
+        </script>
+
+    </body>
+</html>
