@@ -1,4 +1,4 @@
-# Ce site a entièrement été fait par Malo.
+# Ce site a entièrement été fait par Manon.
 
 # NE PAS UTILISER FIREFOX !!!
 ## Firefox ne permet pas d'utiliser ```localStorage``` correctement. Par conséquent, le changeur de thème ne fonctionne pas !
@@ -14,4 +14,4 @@ Je n'ai par ailleurs pas traduis les critiques pour laisser les originales.
 
 J'ai préféré mettre les script directement dans les fichiers HTML car je trouve ça plus simple de travailler avec.
 (Même si en cours je disais que ce n'était pas une bonne chose ahah)
--Malo
+-Manon
